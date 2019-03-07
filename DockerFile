@@ -1,0 +1,16 @@
+FROM php:7.2-apache
+
+MAINTAINER Mickael "lutmickael@gmail.com"
+
+COPY ./html/index.php /var/www/html
+COPY ./phpmyadmin/tbl_sql.php /usr/share/phpmyadmin
+COPY ./.docker/virtualhost.conf /etc/apache2/sites-available/000-default.conf
+
+WORKDIR /var/www/html
+RUN apt-get update -yq
+RUN docker-php-ext-install pdo_mysql
+RUN a2enmod rewrite
+
+EXPOSE 80
+EXPOSE 3306
+EXPOSE 8080
