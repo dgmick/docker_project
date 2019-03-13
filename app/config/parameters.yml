@@ -1,5 +1,0 @@
-parameters:
-  MYSQL_ROOT_PASSWORD: root
-  MYSQL_DATABASE: sit-vanilla
-  MYSQL_USER: mickael
-  MYSQL_PASSWORD: root
