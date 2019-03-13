@@ -1,2 +1,0 @@
-<?php
-echo "phpmy admin";
